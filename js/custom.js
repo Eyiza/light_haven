@@ -1,5 +1,3 @@
-console.log("the script is properly referenced");
-
 var alertFname = $("#alert-fname-msg"); // alert div for show alert message
 var alertLname = $("#alert-lname-msg"); // alert div for show alert message
 var alertEmail = $("#alert-email-msg"); // alert div for show alert message
@@ -82,4 +80,37 @@ function validateForm() {
   });
 }
 
-
+$('#contactForm').submit(function (e) {
+  e.preventDefault();
+  $("#alert-msg").hide();
+  validateForm();
+  fname = $("#fname").val();
+  lname = $("#lname").val();
+  email = $("#email").val();
+  subject = $("#subject").val();
+  message = $("#message").val();
+  if (
+    fname !== "" &&
+    lname !== "" &&
+    email !== "" &&
+    validateEmail(email) == true &&
+    subject !== "" &&
+    message !== ""
+  ) {
+    $("#submitButton").html("<i class = 'fa fa-spinner fa-spin'></i> Sending...").css('margin', '10px');
+    $("#submitButton").attr("disabled", "disabled");
+    window.setTimeout(function () {
+      swal("Message has been sent", "", "success");
+      $("#submitButton").removeAttr("disabled");
+      $("#submitButton").html("Leave Message");
+      $("#fname").val("");
+      $("#lname").val("");
+      $("#email").val("");
+      $("#subject").val("");
+      $("#message").val("");
+  }, 3000);
+  }
+  else {
+    return false;
+  }
+});
