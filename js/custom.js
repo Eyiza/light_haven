@@ -100,7 +100,9 @@ function submitForm() {
       $("#message").val("");
     }
     else {
-      swal("Message has not been sent", "", "error");
+      swal("Message has not been sent", "Try again later", "error");
+      $("#submitButton").removeAttr("disabled");
+      $("#submitButton").html("Leave Message");
     }
   };
 }
