@@ -6901,9 +6901,9 @@ img
   max-width: 100%;
   width: 100%;
   display: block;
-  transition: 0.5s all ease-in-out;
+  /* transition: 0.5s all ease-in-out;
   -webkit-transition: .5s ease;
-  -moz-transition: .5s ease;
+  -moz-transition: .5s ease; */
 }
 
 .portfolio .portfolio-item-inner .portfolio-img h4
@@ -6921,7 +6921,7 @@ img
 
 .portfolio .portfolio-item-inner .portfolio-img:hover img
 {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
   /* -webkit-transform: scale(1.05,1.05);
   -moz-transform: scale(1.05,1.05);
   transform: scale(1.05,1.05); */
@@ -6938,7 +6938,7 @@ img
   -moz-transition: 0.5s ease;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.1);
 }
 
 .portfolio .portfolio-item-inner .portfolio-img:hover h4
