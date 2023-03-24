@@ -800,7 +800,7 @@
                   Can prices be negotiated?
                 </h3>
                 <p>
-                  We offer a sliding fee scale for clients in need and can create a budget-friendly treatment plan.
+                  When multiple sessions are booked, it is possible to offer a discount.
                 </p>
               </div>
             </div>
@@ -823,7 +823,7 @@
               </div>
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h4 mb-4">
-                  Can I pay for a session in installments?
+                  How long are the sessions?
                 </h3>
                 <p>
                   Sessions are typically 50-60 minutes long. However, the exact length of a session may vary depending on your needs and goals.
@@ -882,7 +882,7 @@
           </div>
           <div class="row">
             <div class="col-md-12 mb-5">
-              <form class="p-5 bg-white" id="contactForm" action="https://script.google.com/macros/s/AKfycbyRT3AD8wFNq5aJR5DWJ-gMY69Yi3QQGhRPLbabPkKGzTf9IyFtEDXQRSO82DRZmcIK/exec" method="POST">
+              <form class="p-5 bg-white" id="contactForm" name="submit-to-google-sheet">
                 <h2 class="h4 text-black mb-5">Contact Form</h2>
                 <div class="row form-group">
                   <div class="col-md-6 mb-3 mb-md-0">
@@ -1060,15 +1060,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/sweetalert.min.js"></script>   
-    <!-- <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbw86A8WkEpAXiVJX-3W-jFV_R3BylNyLH0oF-sUJf98xavdw2JWNAjyf4K9ytBSWuvA/exec'
-      const form = document.forms['submit-to-google-sheet']
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script> -->
   </body>
 </html>
