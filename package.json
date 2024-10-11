@@ -1,0 +1,17 @@
+{
+  "name": "light_haven",
+  "version": "1.0.0",
+  "description": "Light Virtual Haven is a hub of counseling solutions where we offer virtual sessions at a pretty subsidized rate. Our specialties include career counseling, adolescent counseling, relationship management, anger & stress management, anxiety management, couple and marriage counseling.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "nodemailer": "^6.9.15"
+  }
+}
