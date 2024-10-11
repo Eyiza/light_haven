@@ -2,6 +2,9 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const port = 3000;
@@ -17,8 +20,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: 'lightvirtualhaven@gmail.com', 
-    pass: 'xejt jyry xtbw tocb'    
+    user: process.env.EMAIL_USER, // Your email address
+    pass: process.env.EMAIL_PASS // Your password 
   }
 });
 
