@@ -36,7 +36,7 @@ app.post('/send-email', (req, res) => {
 
   const mailOptions = {
     from: Email,
-    to: 'lightvirtualhaven@gmail.com', // Your email address
+    to: process.env.EMAIL_USER, // Your email address
     subject: Subject,
     // text: `First Name: ${FirstName}\nLast Name: ${LastName}\nEmail: ${Email}\nMessage: ${Message}`
     html: `
@@ -51,6 +51,7 @@ app.post('/send-email', (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
+      console.log("Error: ", error);
       return res.status(500).send('Error: ' + error.toString());
     }
     res.send('Email sent: ' + info.response);
